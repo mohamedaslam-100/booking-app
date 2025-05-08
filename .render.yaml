@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: backend-activity-app
+    env: node
+    buildCommand: pnpm install && pnpm build
+    startCommand: pnpm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: JWT_SECRET
+        value: your_jwt_secret_here
+      - key: MONGODB_URI
+        value: mongodb+srv://Mohamed_Aslam-31:2DmmmfJPNWGbCX9z@cluster0.ja3cjcs.mongodb.net/activity-app?retryWrites=true&w=majority&appName=Cluster0
